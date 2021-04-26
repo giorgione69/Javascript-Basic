@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <title>Product card Ui design</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+    <div class="card">
+      <div class="imgBx">
+        <img src="images/shoes.png"
+        img srcset="images/shoes.png 5000w"/>
+      </div>
+      <div class="contentBx">
+        <h2>Nike Shoes</h2>
+      <div class="size">
+      <h3>Size :</h3>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+  </div>
+    <div class="color">
+      <h3>Color :</h3>
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+
+<div class="quantity">
+<h3> Quantity :</h3>
+    <h4 class="counter-display">(..)</h4>
+    <button class="counter-minus"><strong>-</strong></button>
+    <button class="counter-plus"><strong>+</strong></button>
+</div>
+
+    <script type="text/javascript">
+    let counterDisplayElem = document.querySelector('.counter-display');
+    let counterMinusElem = document.querySelector('.counter-minus');
+    let counterPlusElem = document.querySelector('.counter-plus');
+
+    let count = 0;
+
+    updateDisplay();
+
+
+    counterPlusElem.addEventListener("click",()=>{
+      count++;
+      updateDisplay();
+    }) ;
+
+        counterMinusElem.addEventListener("click",()=>{
+          count--;
+          updateDisplay();
+        });
+
+    function updateDisplay(){
+    counterDisplayElem.innerHTML = count;
+    };
+
+    </script>
+
+    <a href="#">Buy Now</a>
+  </div>
+</div>
+</div>
+</body>
+</html>
